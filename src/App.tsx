@@ -6,6 +6,8 @@ import { Account } from './Account'
 
 const queryClient = new QueryClient()
 import { useAccount } from 'wagmi'
+import Approve from './Approve'
+import Balance from './Balance'
 
 //  function Profile() {
 //   const { address } = useAccount()
@@ -28,6 +30,8 @@ function App() {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
            <ConnectWallet></ConnectWallet>
+           <Approve></Approve>
+           <Balance></Balance>
       </QueryClientProvider>
     </WagmiProvider>
   )
